@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Navbar from "./Navbar";
+import Hero from "./Hero";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
 const CarouselBanner = () => {
@@ -22,7 +24,7 @@ const CarouselBanner = () => {
   }
 
   const handleNext = () => {
-    const newIndex = currentIndex === slides.length -1 ? 0 : currentIndex + 1;
+    const newIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   }
 
@@ -31,12 +33,15 @@ const CarouselBanner = () => {
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-[100vh] bg-center bg-cover"
-      ></div>
-      <div className="hidden group-hover:block absolute translate-y-[-50%] top-[50%] left-5 cursor-pointer">
-        <BsChevronCompactLeft onClick={handlePrevious} size={40}/>
+      >
+        <Navbar/>
+        <Hero/>
       </div>
-      <div className="hidden group-hover:block absolute translate-y-[-50%] top-[50%] right-5 cursor-pointer">
-        <BsChevronCompactRight onClick={handleNext} size={40}/>
+      <div className="md:hidden md:group-hover:block absolute translate-y-[-50%] md:top-[50%] top-[80%] left-5 cursor-pointer text-green-800 font-bold">
+        <BsChevronCompactLeft onClick={handlePrevious} size={50}/>
+      </div>
+      <div className="md:hidden md:group-hover:block absolute translate-y-[-50%] md:top-[50%] top-[80%] md:left-[80rem] sm:left-10 cursor-pointer text-green-800 font-bold">
+        <BsChevronCompactRight onClick={handleNext} size={50}/>
       </div>
     </div>
   );
