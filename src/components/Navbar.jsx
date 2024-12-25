@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
@@ -14,12 +15,19 @@ const Navbar = () => {
         placed.
       </h1>
       <ul className="md:flex hidden">
-        <li className="p-4 text-xl">Home</li>
-        <li className="p-4 text-xl">Users</li>
-        <li className="p-4 text-xl">Contact</li>
-        <li className="p-4 text-xl">About</li>
+        <li className="p-4 text-xl">
+          <Link to="/">Home</Link>
+        </li>
+        <li className="p-4 text-xl">
+          <Link to="/features">Features</Link>
+        </li>
+        <li className="p-4 text-xl">
+          <Link to="/contact">Contact</Link>
+        </li>
+        <li className="p-4 text-xl">
+          <Link to="/about">About</Link>
+        </li>
       </ul>
-      
 
       <div onClick={handleNav} className="md:hidden block">
         {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
@@ -34,10 +42,18 @@ const Navbar = () => {
       >
         <h1 className="font-comfortaa text-5xl px-4 py-4 text-green-900">placed.</h1>
         <ul className="p-4 uppercase ">
-          <li className="p-4 border-b border-gray-600">Home</li>
-          <li className="p-4 border-b border-gray-600">Users</li>
-          <li className="p-4 border-b border-gray-600">Contact</li>
-          <li className="p-4">About</li>
+          <li className="p-4 border-b border-gray-600">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="p-4 border-b border-gray-600">
+            <Link to="/features">Features</Link>
+          </li>
+          <li className="p-4 border-b border-gray-600">
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li className="p-4">
+            <Link to="/about">About</Link>
+          </li>
         </ul>
       </div>
     </div>
