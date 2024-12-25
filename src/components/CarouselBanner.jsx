@@ -40,7 +40,7 @@ const CarouselBanner = () => {
       <div className="md:hidden md:group-hover:block absolute translate-y-[-50%] md:top-[50%] top-[80%] left-5 cursor-pointer text-green-800 font-bold">
         <BsChevronCompactLeft onClick={handlePrevious} size={50}/>
       </div>
-      <div className="md:hidden md:group-hover:block absolute translate-y-[-50%] md:top-[50%] top-[80%] md:left-[80rem] sm:left-10 cursor-pointer text-green-800 font-bold">
+      <div className="md:hidden md:group-hover:block absolute translate-y-[-50%] md:top-[50%] top-[80%] md:left-[90rem] sm:left-10 cursor-pointer text-green-800 font-bold">
         <BsChevronCompactRight onClick={handleNext} size={50}/>
       </div>
     </div>
